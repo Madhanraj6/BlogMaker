@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+   #topic {
+    text-transform: capitalize;
+    text-decoration: none;
+   }
+</style>
+<div class="card mt-4">
+    <div class="card-body">
+        <h4>Search Posts</h4>
+        <form method="GET" action="{% url 'post_list' %}">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search by title...">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% if messages %} {% for message in messages %}
+<div class="alert alert-{{ message.tags }}" role="alert">
+    {{ message }}
+  </div>
+{% endfor %} {% endif %}
+<div class="container mt-5">
+    <h1 class="mb-4">Blog Posts</h1>
+    <a href="{% url 'post_create' %}" class="btn btn-primary mb-4">Create New Post</a>
+    <div class="list-group">
+        {% for post in posts %}
+        <div class="list-group-item">
+            <div class="d-flex w-100 justify-content-between">
+                <a href="{% url 'post_detail' post.id %}" id="topic" class="w-75">
+                    <h5 class="mb-1">{{ post.title }}</h5>
+                    <small>Published on {{ post.created_at|date:"F d, Y" }}</small>
+                </a>
+                <div>
+                    <a href="{% url 'post_edit' post.id %}" class="btn btn-sm btn-secondary">Edit</a>
+                    <form action="{% url 'post_delete' post.id %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
