@@ -68,5 +68,5 @@ Bootstrap: For the responsive design components.
 
 #Here are some screenshot images
 ![BLOGMAKER](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWY2ejU2NmZtbGJtcWhiZXU1bWwyOGVvZmY5Z3dndDBnbmdpcmhodCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/N6eA75onoVCp8BWfL6/giphy.gif)
-Django: For prov![Screenshot 2024-09-03 103832](https://github.com/user-attachments/assets/a0196fec-651f-40ce-b290-6077d504adbe)
-iding a robust framework ![Screenshot 2024-09-03 103858](https://github.com/user-attachments/assets/ac16d340-dbd9-463d-ac2d-92df0000e8d0)
+![Screenshot 2024-09-03 103832](https://github.com/user-attachments/assets/a0196fec-651f-40ce-b290-6077d504adbe)
+![Screenshot 2024-09-03 103858](https://github.com/user-attachments/assets/ac16d340-dbd9-463d-ac2d-92df0000e8d0)
